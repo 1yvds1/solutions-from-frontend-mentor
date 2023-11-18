@@ -1,0 +1,151 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul {
+  margin: 0px;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.content {
+  height: 100%;
+  background: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 350px;
+  background: hsl(216, 50%, 16%);
+  border-radius: 15px;
+}
+.card__row {
+  display: flex;
+  flex-direction: column;
+}
+.card__img {
+  max-width: 100%;
+  max-height: 300px;
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+.card__imghold {
+  max-width: 80%;
+  position: relative;
+}
+.card__imghold::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsla(178, 100%, 50%, 0.34);
+  border-radius: 15px;
+  content: url(/images/icon-view.svg);
+  width: 280px;
+  height: 280px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 2s opacity;
+}
+.card__imghold:hover::before {
+  opacity: 1;
+}
+.card__img img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+.card__info {
+  padding: 7% 10%;
+}
+.card__title {
+  font-family: "Outfit", sans-serif;
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 8%;
+  transition: 2s all;
+}
+.card__title:hover {
+  color: hsl(178, 100%, 50%);
+}
+.card__text {
+  font-size: 17px;
+  color: hsl(215, 51%, 70%);
+  margin-bottom: 10%;
+}
+.card__holder {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10%;
+}
+.card__price {
+  color: hsl(178, 100%, 50%);
+  position: relative;
+  padding-left: 6%;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+}
+.card__price::before {
+  position: absolute;
+  content: url(/images/icon-ethereum.svg);
+  top: 1px;
+  left: 0;
+}
+.card__time {
+  color: hsl(215, 51%, 70%);
+  position: relative;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+.card__time::before {
+  position: absolute;
+  content: url(/images/icon-clock.svg);
+  top: 2px;
+  left: -20px;
+}
+.card hr {
+  background-color: hsl(215, 32%, 27%);
+  height: 1px;
+  border: none;
+}
+.card__userinfo {
+  display: flex;
+  margin-top: 6%;
+}
+.card__avatar {
+  max-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.card__avatar img {
+  width: 30px;
+}
+.card__username {
+  margin-left: 5%;
+  padding: 1.5% 0;
+  font-size: 18px;
+  color: hsl(215, 51%, 70%);
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+}
+.card__username a {
+  text-decoration: none;
+  color: white;
+  transition: 2s all;
+}
+.card__username a:hover {
+  color: hsl(178, 100%, 50%);
+}
